@@ -13,7 +13,8 @@ namespace AdventOfCode.Core
     public int Run(int[] depths)
     {
 
-      IList<int> listDepths = (IList.ConvertAll(depths, s => Int32.Parse(s)));
+      IList<int> listDepths = depths.ConvertAll(depths, s => Int32.Parse(s));
+      //IList<int> listDepths = (IList.ConvertAll(depths, s => Int32.Parse(s)));
 
       var count = 0;
       for (int i = 1; i < listDepths.Count(); i++)
