@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace AdventOfCode.Core
 {
@@ -9,17 +12,20 @@ namespace AdventOfCode.Core
 
     public int Run(int[] depths)
     {
-      //var count = 0;
-      //for (int i = 1; i < depths.Count(); i++)
-      //{
-      //  if (depths[i] > depths[i - 1])
-      //  {
 
-      //    count += 1;
-      //  }
+      IList<int> listDepths = (IList.ConvertAll(depths, s => Int32.Parse(s)));
 
-      //}
-      return 7;
+      var count = 0;
+      for (int i = 1; i < listDepths.Count(); i++)
+      {
+        if (listDepths[i] > listDepths[i - 1])
+        {
+
+          count += 1;
+        }
+
+      }
+      return count;
     }
   }
 }
