@@ -1,6 +1,6 @@
 ﻿using AdventOfCode.Core;
 using System;
-using System.Linq;
+using System.IO;
 
 namespace AdventOfCode
 {
@@ -8,18 +8,10 @@ namespace AdventOfCode
   {
     public static void Main(string[] args)
     {
-
-      //var count = 0;
-      //for (int i = 1; i < depths.Count(); i++)
-      //{
-      //  if (depths[i] > depths[i - 1])
-      //  {
-
-      //    count += 1;
-      //  }
-
-      //}
-
+      //TODO: salvar os valores em um arquivo de texto
+      //TODO: carregar valores de um arquivo de texto
+      string[] depths = File.ReadAllLines(@"C:\Adventoofcode\advent-of-code-2021\puzzleInput.txt");
+      
       var day1 = new Day1();
       var count = day1.Run(null);
 

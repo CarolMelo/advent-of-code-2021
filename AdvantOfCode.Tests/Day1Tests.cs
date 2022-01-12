@@ -16,5 +16,7 @@ namespace AdvantOfCode.Tests
 
       day1.Run(depths).Should().Be(7);
     }
+
+    //TODO: teste com lista vazia
   }
 }
