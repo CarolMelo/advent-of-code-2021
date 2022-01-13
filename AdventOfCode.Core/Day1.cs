@@ -12,13 +12,13 @@ namespace AdventOfCode.Core
     public int Run(IList<int> depths)
     {
       var count = 0;
-      var anterior = 0;
+      var previous = depths[0];
 
       foreach (int n in depths)
       {
-        if (n > anterior)
+        if (n > previous)
         {
-          anterior = n;
+          previous = n;
           count += 1;
         }
 
