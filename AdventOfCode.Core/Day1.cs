@@ -7,19 +7,18 @@ namespace AdventOfCode.Core
 {
   public class Day1
   {
-    //TODO: TROCAR POR UM ILIST<int> 
-    //TODO: organizar código
+    //TODO: trocar o for por foreach
 
-    public int Run(int[] depths)
+    public int Run(IList<int> depths)
     {
 
-      IList<int> listDepths = depths.ConvertAll(depths, s => Int32.Parse(s));
+      //IList<int> listDepths = depths.ConvertAll(depths, s => Int32.Parse(s));
       //IList<int> listDepths = (IList.ConvertAll(depths, s => Int32.Parse(s)));
 
       var count = 0;
-      for (int i = 1; i < listDepths.Count(); i++)
+      for (int i = 1; i < depths.Count(); i++)
       {
-        if (listDepths[i] > listDepths[i - 1])
+        if (depths[i] > depths[i - 1])
         {
 
           count += 1;

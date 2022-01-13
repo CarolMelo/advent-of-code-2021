@@ -18,5 +18,6 @@ namespace AdvantOfCode.Tests
     }
 
     //TODO: teste com lista vazia
+
   }
 }
