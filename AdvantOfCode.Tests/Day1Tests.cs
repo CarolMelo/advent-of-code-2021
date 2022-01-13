@@ -1,6 +1,5 @@
 using AdventOfCode.Core;
 using FluentAssertions;
-using System;
 using Xunit;
 
 namespace AdvantOfCode.Tests

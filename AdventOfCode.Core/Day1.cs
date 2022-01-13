@@ -11,16 +11,14 @@ namespace AdventOfCode.Core
 
     public int Run(IList<int> depths)
     {
-
-      //IList<int> listDepths = depths.ConvertAll(depths, s => Int32.Parse(s));
-      //IList<int> listDepths = (IList.ConvertAll(depths, s => Int32.Parse(s)));
-
       var count = 0;
-      for (int i = 1; i < depths.Count(); i++)
-      {
-        if (depths[i] > depths[i - 1])
-        {
+      var anterior = 0;
 
+      foreach (int n in depths)
+      {
+        if (n > anterior)
+        {
+          anterior = n;
           count += 1;
         }
 
